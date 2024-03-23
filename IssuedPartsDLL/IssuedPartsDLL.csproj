@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF7269E4-4457-491A-B95C-29B223565908}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IssuedPartsDLL</RootNamespace>
+    <AssemblyName>IssuedPartsDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindIssuedPartsByAssignedProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByAssignedProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsByEmployeeIDAndDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByEmployeeIDAndDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsByEntryEmployeeIDAndDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByEntryEmployeeIDAndDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsByPartIDWarehouseIDAndDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByPartIDWarehouseIDAndDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsByProjectNameDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByProjectNameDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsByTransactionDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByTransactionDateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsByTransactionIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByTransactionIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsByWarehouseIDAndDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsByWarehouseIDAndDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindIssuedPartsQuickByTransactionIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindIssuedPartsQuickByTransactionIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertIssuedPartsData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertIssuedPartsData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IssuedPartsClass.cs" />
+    <Compile Include="IssuedPartsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssuedPartsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateIssuedPartsProjectIDEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateIssuedPartsProjectIDEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateIssuedPartsQuantityData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateIssuedPartsQuantityData.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindIssuedPartsByAssignedProjectIDDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByAssignedProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByAssignedProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByAssignedProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByAssignedProjectIDDataSet.xss">
+      <DependentUpon>FindIssuedPartsByAssignedProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByDateRangeDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByDateRangeDataSet.xss">
+      <DependentUpon>FindIssuedPartsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByEmployeeIDAndDateRangeDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByEmployeeIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByEmployeeIDAndDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByEmployeeIDAndDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByEmployeeIDAndDateRangeDataSet.xss">
+      <DependentUpon>FindIssuedPartsByEmployeeIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByEntryEmployeeIDAndDateRangeDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByEntryEmployeeIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByEntryEmployeeIDAndDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByEntryEmployeeIDAndDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByEntryEmployeeIDAndDateRangeDataSet.xss">
+      <DependentUpon>FindIssuedPartsByEntryEmployeeIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByPartIDWarehouseIDAndDateRangeDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByPartIDWarehouseIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByPartIDWarehouseIDAndDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByPartIDWarehouseIDAndDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByPartIDWarehouseIDAndDateRangeDataSet.xss">
+      <DependentUpon>FindIssuedPartsByPartIDWarehouseIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByProjectIDDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByProjectIDDataSet.xss">
+      <DependentUpon>FindIssuedPartsByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByProjectNameDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByProjectNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByProjectNameDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByProjectNameDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByProjectNameDataSet.xss">
+      <DependentUpon>FindIssuedPartsByProjectNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByTransactionDateDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByTransactionDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByTransactionDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByTransactionDateDataSet.xss">
+      <DependentUpon>FindIssuedPartsByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByTransactionIDDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByTransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByTransactionIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByTransactionIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByTransactionIDDataSet.xss">
+      <DependentUpon>FindIssuedPartsByTransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByWarehouseIDAndDateRangeDataSet.xsc">
+      <DependentUpon>FindIssuedPartsByWarehouseIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsByWarehouseIDAndDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsByWarehouseIDAndDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsByWarehouseIDAndDateRangeDataSet.xss">
+      <DependentUpon>FindIssuedPartsByWarehouseIDAndDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsQuickByTransactionIDDataSet.xsc">
+      <DependentUpon>FindIssuedPartsQuickByTransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindIssuedPartsQuickByTransactionIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindIssuedPartsQuickByTransactionIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindIssuedPartsQuickByTransactionIDDataSet.xss">
+      <DependentUpon>FindIssuedPartsQuickByTransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertIssuedPartsData.xsc">
+      <DependentUpon>InsertIssuedPartsData.xsd</DependentUpon>
+    </None>
+    <None Include="InsertIssuedPartsData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertIssuedPartsData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertIssuedPartsData.xss">
+      <DependentUpon>InsertIssuedPartsData.xsd</DependentUpon>
+    </None>
+    <None Include="IssuedPartsDataSet.xsc">
+      <DependentUpon>IssuedPartsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IssuedPartsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IssuedPartsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IssuedPartsDataSet.xss">
+      <DependentUpon>IssuedPartsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateIssuedPartsProjectIDEntry.xsc">
+      <DependentUpon>UpdateIssuedPartsProjectIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateIssuedPartsProjectIDEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateIssuedPartsProjectIDEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateIssuedPartsProjectIDEntry.xss">
+      <DependentUpon>UpdateIssuedPartsProjectIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateIssuedPartsQuantityData.xsc">
+      <DependentUpon>UpdateIssuedPartsQuantityData.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateIssuedPartsQuantityData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateIssuedPartsQuantityData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateIssuedPartsQuantityData.xss">
+      <DependentUpon>UpdateIssuedPartsQuantityData.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
